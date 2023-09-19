@@ -1,0 +1,19 @@
+// Import all partials
+@use './partials/mixins';
+@use './partials/variables';
+
+//* boostrap variables modificator
+
+$primary:#ef6f31;
+$secondary:#6ac5f1;
+$info: #f5f5f5;
+$light:#ffffff;
+$dark:#333333;
+$success:#1972f5;
+
+//* -------------------------------=
+
+
+// Import all of Bootstrap's CSS
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
