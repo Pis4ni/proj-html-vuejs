@@ -11,11 +11,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faUserSecret, faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { faClock } from '@fortawesome/free-regular-svg-icons'
+import { faClock, faFileLines } from '@fortawesome/free-regular-svg-icons'
 import { faTwitter,faFacebook,faInstagram,faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret, faClock, faChevronDown, faTwitter,faFacebook,faInstagram,faLinkedin)
+library.add(faUserSecret, faClock, faChevronDown, faTwitter,faFacebook,faInstagram,faLinkedin, faFileLines)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 // * ====================================================================

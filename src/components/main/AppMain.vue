@@ -6,7 +6,8 @@ import btn from "../general/btn.vue";
 // import  from "./components/main/.vue";
 import SectionWelcome from "./welcome/SectionWelcome.vue";
 import SectionPresentation from "./presentation/SectionPresentation.vue";
-import SectionCardSlider from "./card_slider/SectionCard.Slider.vue";
+import SectionCardSlider from "./card_slider/SectionCardSlider.vue";
+import SectionArtistCoaching from "./artist_coaching/SectionArtistCoaching.vue";
 
 export default {
   data() {
@@ -15,7 +16,7 @@ export default {
     }
   },
   components: {
-    btn,SectionWelcome,SectionPresentation,SectionCardSlider
+    btn,SectionWelcome,SectionPresentation,SectionCardSlider,SectionArtistCoaching
   },
 };
 </script>
@@ -24,6 +25,7 @@ export default {
   <SectionWelcome />
   <SectionPresentation />
   <SectionCardSlider />
+  <SectionArtistCoaching />
 </template>
 
 <style lang="scss" scoped></style>
