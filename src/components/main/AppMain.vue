@@ -8,6 +8,8 @@ import SectionWelcome from "./welcome/SectionWelcome.vue";
 import SectionPresentation from "./presentation/SectionPresentation.vue";
 import SectionCardSlider from "./card_slider/SectionCardSlider.vue";
 import SectionArtistCoaching from "./artist_coaching/SectionArtistCoaching.vue";
+import SectionArticlesAndTips from "./articles_and_tips/SectionArticlesAndTips.vue";
+import SectionUpcomingEvents from "./upcoming_events/SectionUpcomingEvents.vue";
 
 export default {
   data() {
@@ -16,7 +18,7 @@ export default {
     }
   },
   components: {
-    btn,SectionWelcome,SectionPresentation,SectionCardSlider,SectionArtistCoaching
+    btn,SectionWelcome,SectionPresentation,SectionCardSlider,SectionArtistCoaching,SectionArticlesAndTips,SectionUpcomingEvents
   },
 };
 </script>
@@ -26,6 +28,8 @@ export default {
   <SectionPresentation />
   <SectionCardSlider />
   <SectionArtistCoaching />
+  <SectionArticlesAndTips />
+  <SectionUpcomingEvents />
 </template>
 
 <style lang="scss" scoped></style>
