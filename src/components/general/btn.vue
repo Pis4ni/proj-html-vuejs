@@ -8,7 +8,7 @@ export default {
   },
   methods: {
     submit (event){
-        console.log('ciao! mi hanno premuto, per allacciare l evento usa un listener, come ad esempio:  ' + '@hasClicked="console.log("click ricevuto")"' + '   sul contenitore padre');
+        console.log('ciao! mi hanno premuto, per allacciare l` evento usa un listener, come ad esempio:  ' + '@hasClicked="console.log("click ricevuto")"' + '   sul contenitore padre');
         this.$emit('hasClicked')
     }
   },
@@ -25,5 +25,6 @@ export default {
 <style lang="scss" scoped>
 button{
     padding: .5rem 2rem;
+    
 }
 </style>

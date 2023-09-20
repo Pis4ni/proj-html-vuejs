@@ -18,7 +18,6 @@ export default {
 
 <template>
   <!-- < /> -->
-  <h1 class="text-primary">{{ title }}</h1>
   <AppHeader />
   <AppMain />
   <AppFooter />
