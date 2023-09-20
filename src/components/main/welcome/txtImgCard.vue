@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-<div class="card mx-1" style="width: 18rem;">
+<div class="card" style="width: 18rem;">
   <img :src="buildImgPath(img)" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{heading}}</h5>

@@ -16,8 +16,6 @@ export default {
     buildImgPath
   },
   mounted(){
-    console.log('esisto, sono una card');
-    console.log(this.size);
   }
 };
 </script>
@@ -34,7 +32,7 @@ export default {
 
 .sm{
   width: 180px;
-  
+
 }
 .m{
   width: 230px;
@@ -47,6 +45,7 @@ img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: .5rem;
   
 }
 </style>
