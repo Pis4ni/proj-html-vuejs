@@ -34,12 +34,12 @@ export default {
 
     <div class="container">
 
-        <div class="d-flex">
+        <div class="d-flex my-5 py-5">
             <div class="d-flex align-items-center justify-content-center flex-column w-50">
                 <div class="quote">
                     <img :src="buildImgPath(this.quote.imgName)" alt="">
                 </div>
-                <span class="h1 w-75">
+                <span class="h1">
                     {{ quote.heavyTxt }}
                 </span>
                 <span>
@@ -68,6 +68,18 @@ export default {
     </div>
 </template>
 
+<!-- todo STAVI STILIZZANDO LA LUNGHEZZA MASSIMA DEGLI SPAN E DEI P DESTRI -->
+
+
 <style lang="scss" scoped>
+span{
+  max-width: 450px;
+}
+txt-content{
+  p{
+
+    max-width: 450px;
+  }
+}
 
 </style>

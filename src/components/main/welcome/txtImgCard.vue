@@ -24,8 +24,8 @@ export default {
 </script>
 
 <template>
-<div class="card" style="width: 18rem;">
-  <img :src="buildImgPath(img)" class="card-img-top" alt="...">
+<div class="card p-3 layout" style="width: 18rem;">
+  <img :src="buildImgPath(img)" class="card-img-top p-3" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{heading}}</h5>
     <p class="card-text">{{ txt }}</p>
@@ -40,5 +40,9 @@ img{
     width: 100%;
     height: 100px;
     object-fit: contain;
+
     }
+  .layout{
+    text-align: start;
+  }
 </style>

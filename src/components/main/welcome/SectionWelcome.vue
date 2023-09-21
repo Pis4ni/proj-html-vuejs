@@ -2,6 +2,7 @@
 import imgCard from "./imgCard.vue";
 import txtImgCard from "./txtImgCard.vue";
 import btn from "../../general/btn.vue";
+import SectionHeader from "../../general/SectionHeader.vue";
 
 export default {
   data() {
@@ -23,9 +24,13 @@ export default {
         size:'m'
         }
       ],
-      txtContent:{
+      headerTxt:{
         title:'Hello, im Matin',
-        content:'Artist Coaching And Mentoring Might Be for You.'
+        subtitle:'Artist Coaching And Mentoring Might Be for You.'
+      },
+      headerTxtB:{
+        title:'Artist coaching',
+        subtitle:'I understand what it takes to create. I can help you with'
       },
       txtContentB:{
         title:'Artist coaching',
@@ -56,53 +61,56 @@ export default {
           heading:'On Time',
           content:'Punctuality is our top priority because it`s an essetial criteria to assess a program quality'
         },
-        ]
+      ]
     }
   },
   components: {
-    imgCard,txtImgCard,btn
+    imgCard,txtImgCard,btn,SectionHeader
   },
 };
 </script>
 
 <template>
-  <div class="jumbo">
-    <!-- < /> -->
-    <div class="d-flex justify-content-evenly">
-      <div class="cards-container-a">
-        <imgCard class="down" :size="this.cardsImg[0].size" :cardsImg="this.cardsImg[0].path"/>
-        <imgCard class="up" :size="this.cardsImg[1].size" :cardsImg="this.cardsImg[1].path"/>
-      </div>
-      <div class="content-container-a ">
-        <h2>{{ txtContent.title }}</h2>
-        <span>{{ txtContent.content }}</span>
+  <div class="container">
 
-        <btn :innterTxt="this.btn.txt"/>
-      </div>
-      <div class="cards-container-b">
-        <div class="positioner">
-          <imgCard :size="this.cardsImg[2].size" :cardsImg="this.cardsImg[2].path"/>
-
+    <div class="jumbo">
+      <!-- < /> -->
+      <div class="d-flex justify-content-evenly">
+        <div class="cards-container-a">
+          <imgCard class="down" :size="this.cardsImg[0].size" :cardsImg="this.cardsImg[0].path"/>
+          <imgCard class="up" :size="this.cardsImg[1].size" :cardsImg="this.cardsImg[1].path"/>
         </div>
+        <div class="content-container-a ">
+          <SectionHeader :headerInfo="this.headerTxt"/>
 
-        
-      </div>
-    </div>
-    <div class="cards-txt-img-container">
-      <div class="m-3">
-
-        <h2>{{ txtContentB.title }}</h2>
-        <span>{{ txtContentB.content }}</span>
-      </div>
-
-      <div class="container">
-        <div class="d-flex justify-content-between">
-          <txtImgCard v-for="(card,index) in this.cardsImgTxt" key="index" :img="card.img" :heading="card.heading" :txt="card.content" />
+  
+          <btn :innterTxt="this.btn.txt"/>
+        </div>
+        <div class="cards-container-b">
+          <div class="positioner">
+            <imgCard :size="this.cardsImg[2].size" :cardsImg="this.cardsImg[2].path"/>
+  
+          </div>
+  
+          
         </div>
       </div>
+      <div class="cards-txt-img-container">
 
+
+        <div class="m-3">
+          <SectionHeader :headerInfo="this.headerTxtB"/>
+        </div>
+  
+        <div class="container my-5">
+          <div class="d-flex justify-content-between">
+            <txtImgCard v-for="(card,index) in this.cardsImgTxt" key="index" :img="card.img" :heading="card.heading" :txt="card.content" />
+          </div>
+        </div>
+  
+      </div>
+  
     </div>
-
   </div>
 </template>
 <style lang="scss" scoped>
@@ -131,11 +139,12 @@ export default {
     .positioner{
       position: relative;
       top: 100px;
-      right: 50px;
+      right: 100px;
     }
     
   }
   .content-container-a{
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;

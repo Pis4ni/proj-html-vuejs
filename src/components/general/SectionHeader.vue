@@ -28,6 +28,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+h2{
+  max-width: 500px;
+}
 
 </style>
