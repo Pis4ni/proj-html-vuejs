@@ -24,4 +24,9 @@ export default {
 
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+// body{
+//     background-color: #343434
+// }
+</style>
