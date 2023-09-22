@@ -2,10 +2,12 @@
 // import MyComponent from "./components/MyComponent.vue";
 import CardA from "../../general/CardA.vue";
 import SectionHeader from "../../general/SectionHeader.vue";
+import btn from "../../general/btn.vue";
 
 export default {
   data() {
     return {
+
       title: "Hello world",
       headerTxt:{
         title:'Articles And Tips',
@@ -50,7 +52,7 @@ export default {
   },
 
   components: {
-    CardA,SectionHeader
+    CardA,SectionHeader,btn
   },
 };
 </script>
@@ -63,7 +65,9 @@ export default {
             <cardA v-for="(card, index) in this.ArtistsCardsData" key="index" :cardObj="card"/>
 
         </div>
-
+        <div class="d-flex justify-content-center align-items-center w-100 my-2">
+          
+        </div>
     </div>
     <!-- <cardA :cardObj=""/> -->
 

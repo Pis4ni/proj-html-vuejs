@@ -2,6 +2,10 @@ const app = createApp(App)
 import { createApp } from 'vue'
 import './assets/scss/style.scss'
 import App from './App.vue'
+
+// Supports weights 400-700
+import '@fontsource-variable/dancing-script';
+
 // * ========================= FontAwesome =============================
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'

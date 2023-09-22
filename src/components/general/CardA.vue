@@ -39,19 +39,24 @@ export default {
 
   <div :class="'card mb-3 width ' + cardObj.modificatorC">
     <img :src="buildImgPath(cardObj.imgName)" class="card-img-top" alt="" />
-    <div class="card-body transparent">
-      <h5 :class="'card-title text-' + cardObj.modificatorD">{{ cardObj.dataA }}</h5>
-      <p class="card-text h5">
-            {{ cardObj.title }}
-      </p>
+    <div class="hoverStyle">
 
-      <div class="d-flex align-items-center icon-container">
-        <font-awesome-icon :icon="'fa-regular ' + cardObj.modificatorA" class="m-1" />
-        <span class="m-1">{{cardObj.dataB}} </span>
-        <font-awesome-icon :icon="'fa-regular ' + cardObj.modificatorB" class="ms-2 m-1" />
-        <span class="m-1">{{cardObj.dataC}} </span>
-      </div>
+      
+          <div class="card-body transparent ">
+            <h5 :class="'card-title text-' + cardObj.modificatorD">{{ cardObj.dataA }}</h5>
+            <p class="card-text h5">
+                  {{ cardObj.title }}
+            </p>
+      
+            <div class="d-flex align-items-center icon-container">
+              <font-awesome-icon :icon="'fa-regular ' + cardObj.modificatorA" class="m-1" />
+              <span class="m-1">{{cardObj.dataB}} </span>
+              <font-awesome-icon :icon="'fa-regular ' + cardObj.modificatorB" class="ms-2 m-1" />
+              <span class="m-1">{{cardObj.dataC}} </span>
+            </div>
+          </div>
     </div>
+
   </div>
 
 </template>
@@ -59,6 +64,15 @@ export default {
 <style lang="scss" scoped>
 .deb{
   background-color: blue;
+}
+.hoverStyle{
+  height: 100%;
+  cursor: pointer;
+  &:hover{
+    background-color: #ffffff;
+    transform: translate(-10px, -10px);
+    box-shadow: 0 0 10px 1px inset #ef6f31;
+  }
 }
 .width{
   width: calc((100% - 15rem) / 4);

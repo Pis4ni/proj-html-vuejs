@@ -18,10 +18,10 @@ export default {
 </script>
 
 <template>
-<div class="card mb-3 w-50" style="max-width: 540px;">
+<div class="card mb-5 w-50 styled" style="max-width: 540px;">
   <div :class="'row g-0 ' + cardObj.modificatorB">
     <div class="col-md-4">
-      <img :src="buildImgPath(cardObj.imgName)" :class="'img-fluid rounded-'+ modificatorC" alt="...">
+      <img :src="buildImgPath(cardObj.imgName)" :class="'img-fluid rounded-'+ cardObj.modificatorC" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body d-flex flex-column justify-content-evenly align-items-start h-100">
@@ -39,5 +39,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+.styled{
+  border: none;
+}
 </style>

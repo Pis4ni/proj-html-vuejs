@@ -17,7 +17,9 @@ export default {
           dataB:'NOV 22, 2020',
           dataC:'Texas, US',
           modificatorA:'fa-location-dot',
-          modificatorB:'start',
+          modificatorB:'',
+          modificatorC:'start',
+
           
         },
         {

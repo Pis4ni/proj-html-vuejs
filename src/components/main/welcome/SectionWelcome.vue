@@ -82,15 +82,16 @@ export default {
 
 <template>
   <div class="wrapper py-5">
-    <div class="bg">
-
-      <img :src="buildImgPath(this.bgImg[0])" alt="">
-      <img :src="buildImgPath(this.bgImg[1])" alt="">
-      <img :src="buildImgPath(this.bgImg[2])" alt="">
-      <img :src="buildImgPath(this.bgImg[3])" alt="">
-      <img :src="buildImgPath(this.bgImg[4])" alt="">
-    </div>
     <div class="container">
+      
+      <div class="bg">
+  
+        <img :src="buildImgPath(this.bgImg[0])" alt="">
+        <img :src="buildImgPath(this.bgImg[1])" alt="">
+        <img :src="buildImgPath(this.bgImg[2])" alt="">
+        <img :src="buildImgPath(this.bgImg[3])" alt="">
+        <img :src="buildImgPath(this.bgImg[4])" alt="">
+      </div>
   
       <div class="jumbo">
         <!-- < /> -->
@@ -102,8 +103,12 @@ export default {
           <div class="content-container-a ">
             <SectionHeader :headerInfo="this.headerTxt"/>
   
-    
-            <btn :innterTxt="this.btn.txt"/>
+            <div class="btn-container">
+
+              <btn :innterTxt="this.btn.txt" :color="''" />
+            </div>
+
+
           </div>
           <div class="cards-container-b">
             <div class="positioner">
@@ -130,35 +135,40 @@ export default {
         </div>
     
       </div>
+
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
+.btn-container{
+  z-index: 5;
+}
 .shadow{
   box-shadow: 0 0 10px 10px;
 }
 .bg{
   position: absolute;
   width: 100%;
+  max-width: 1000px;
   img:nth-child(3){
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0;;
   }
   img:nth-child(2){
     position: absolute;
-    right: 250px;
+    left: 550px;
     top: 0;
   }
   img:nth-child(1){
     position: absolute;
-    left: 650px;
-    bottom: -130px;
+    left: 270px;
+    bottom: -100px;
   }
   img:nth-child(5){
     position: absolute;
-    right: 420px;
-    top: 0px;
+    left: 1070px;
+    top: -40px;
   }
 }
 .jumbo{

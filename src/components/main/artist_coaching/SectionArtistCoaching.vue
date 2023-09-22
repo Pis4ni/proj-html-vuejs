@@ -2,10 +2,15 @@
 // import MyComponent from "./components/MyComponent.vue";
 import SectionHeader from "../../general/SectionHeader.vue";
 import CardA from "../../general/CardA.vue";
+import btn from "../../general/btn.vue";
 
 export default {
   data() {
     return {
+      btn:{
+        txt:'View all courses',
+        link:''
+      },
       headerTxt:{
         title:'Artist coaching',
         subtitle:'Latest Online Courses'
@@ -104,7 +109,7 @@ export default {
     }
   },
   components: {
-    SectionHeader,CardA
+    SectionHeader,CardA,btn
   },
 };
 </script>
@@ -115,6 +120,11 @@ export default {
         <SectionHeader :headerInfo="this.headerTxt"/>
         <div class="d-flex justify-content-evenly align-items-evenly flex-wrap">
         <cardA v-for="(card, index) in this.coursesCardsData" key="index" :cardObj="card"/>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center w-100 my-2">
+          <btn :innterTxt="this.btn.txt" :color="'color-b'" />
+
         </div>
     </div>
 </template>

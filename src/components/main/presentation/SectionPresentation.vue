@@ -54,7 +54,10 @@ export default {
                 <span>
                     {{ txtContentB }}
                 </span>
-                <btn :innterTxt="btnTxt" @hasClicked=""/>
+                <div class="btn-container my-4">
+
+                  <btn :innterTxt="btnTxt" @hasClicked=""/>
+                </div>
 
             </div>
         </div>
@@ -75,11 +78,14 @@ export default {
 span{
   max-width: 450px;
 }
-txt-content{
-  p{
-
+/* .txt-content{
+  span{
+    display: block;
     max-width: 450px;
   }
-}
+  p{
+    max-width: 450px;
+  }
+} */
 
 </style>

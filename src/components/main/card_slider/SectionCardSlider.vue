@@ -59,8 +59,8 @@ export default {
         [
 
           {
-            headingTxt:'it`s a choice of quality for needs',
-            contentTxt:'i`m a very strict person so i require everything to be organized and neat. Then, i`ll be. MaxCoach guys just got me.',
+            headingTxt:'it`s a choice of quality for needs of deeds in lol ',
+            contentTxt:'i`m a very everything follow the learn at my own peace person so i require MaxCoach is my best choice everything to be organized and neat. Then, i`ll be. MaxCoach guys just got me.',
             imgName:'artist-testimonial-avatar-02.jpg',
             author:'Florence Themes',
             occupation:'Multimedia Admin'
@@ -92,11 +92,23 @@ export default {
     updateIndex (index){
       console.log(index);
       this.sliderIndex = index
+    },
+    nextSeries (){
+      console.log(this.sliderIndex);
+
+      if (this.sliderIndex < this.cardsData.length - 1) {
+        this.sliderIndex++
+      }else{
+        this.sliderIndex = 0
+      }
     }
   },
   components: {
     CardQuotes,SectionHeader,SliderBtn
   },
+  mounted() {
+    const sliderInterval =  setInterval(this.nextSeries, 5000)
+  }
 };
 </script>
 
